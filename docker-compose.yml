@@ -8,3 +8,4 @@ services:
       - '.:/code'
   redis:
     image: 'redis:alpine'
+    volumes: []
