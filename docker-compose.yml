@@ -6,6 +6,12 @@ services:
       - '5000:5000'
     volumes:
       - '.:/code'
-  redis:
-    image: 'redis:alpine'
-    volumes: []
+    external_links:
+      - redis
+
+    #network_mode: bridge
+    networks: 
+      - mynet
+networks:
+    mynet:
+      external: true

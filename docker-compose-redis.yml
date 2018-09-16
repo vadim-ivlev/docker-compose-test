@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+  rds:
+    image: 'redis:alpine'
+    container_name: redis
+    volumes: []
+    #network_mode: bridge
+
+    networks: 
+        - mynet
+networks:
+    mynet:
+        name: mynet
+
